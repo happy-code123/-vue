@@ -1,4 +1,4 @@
-# xbed-demo
+# xbed
 
 > A Vue.js project
 
