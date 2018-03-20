@@ -34,8 +34,15 @@ module.exports = {
             pathRewrite:{
                 '^/m':'/'
             }
+        },
+        '/ticket-m':{
+            target:'https://ticket-m.mtime.cn',
+            changeOrigin:true,
+            pathRewrite:{
+                '^/ticket-m':'/'
+            }
         }
-
+        
     },
 
     // CSS Sourcemaps off by default because relative paths are "buggy"
