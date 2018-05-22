@@ -16,8 +16,6 @@ import Video from "@/components/movie/video"
 
 
 
-
-
 Vue.use(Router)
 
 // 配置路由
@@ -57,7 +55,7 @@ export default new Router({
             component:Citylist
         },
         {
-            path:"/index/movie/:id",
+            path:"/index/movie/:id",  // 传递路由参数
             component:Movie
         },
         {

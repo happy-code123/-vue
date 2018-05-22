@@ -1,6 +1,6 @@
 <template>
 	<div class="wrap">
-		<load v-if="false" ></load>
+		<load v-if="isLoad" ></load>
 		<!-- 搜索栏 -->
 		<div class="search">
 			<div class="head_search">
@@ -59,13 +59,13 @@
 			console.log(Date.now())
 			this.$http.get('/ticket-m/api/proxy/ticket/OnlineLocationCinema/OnlineCinemasByCity.api?locationId='+ locationId +'&_='+Date.now()).then( data => {
 				console.log(data)
-				this.cinemaList = data.data
+				this.cinemaList = data.data;
+				this.isLoad = false;
 			})
-
 
 		},
 		method(){
-
+			
 		},
 		data(){
 			return {

@@ -76,16 +76,12 @@ export default{
 		this.isLoad = true
 	},
 	created () {
+				/*
+		http://m.mtime.cn/Service/callback.mi/Showtime/LocationMovies.api?locationId=290&t=201781111552785091
 
-		/*
+		http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=201781916235984534
 
-http://m.mtime.cn/Service/callback.mi/Showtime/LocationMovies.api?locationId=290&t=201781111552785091
-
-http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=201781916235984534
-
-
-
-/Service/callback.mi/Showtime/LocationMovies.api?locationId="+lID+"&t="+time
+		/Service/callback.mi/Showtime/LocationMovies.api?locationId="+lID+"&t="+time
 		*/
 
 		let date = new Date();
@@ -107,15 +103,12 @@ http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=2
 			// load 消失 
 			
 			this.isLoad = false;
-			
+
 			
 		})
-		
-
 
 	},
 	mounted(){
-
 	},
 	
 	data () {
@@ -137,9 +130,8 @@ http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=2
 	}
 }
 
-
-
 </script>
+
 
 <style scoped>
 .wrap{
@@ -185,7 +177,7 @@ http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=2
 	background-color: #fff;
 	border:1px solid #d8d8d8;
 	border-radius: 0.1rem;
-	padding:0 0.3rem;
+	padding:0 0.3rem 0 0.33rem;
 	box-sizing:border-box;
 	line-height:0.4rem;
 }
@@ -239,7 +231,6 @@ http://m.mtime.cn/Service/callback.mi/PageSubArea/GetFirstPageAdvAndNews.api?t=2
 	float:left;
 	padding:0 0.033rem;
 	box-sizing:border-box;
-
 }
 .hotmovie-item{
 	width:100%;

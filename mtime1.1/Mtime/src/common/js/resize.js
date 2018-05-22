@@ -5,16 +5,17 @@
 		var iphone = navigator.userAgent;
 		// console.log(iphone)
 
-		var width = document.documentElement.clientWidth;
+		// var width = document.documentElement.clientWidth;
+		var width = document.getElementById("app").offsetWidth;
 		var scale = 100*(width /375);
 		document.getElementsByTagName("html")[0].style.fontSize = scale+"px";
-		console.log("scale="+scale)
+		
+		console.log(scale);
 	}
 
 	resizeFunc();
 
-	window.addEventListener("resize",resizeFunc,false)
-
+	window.addEventListener("resize",resizeFunc,false);
 
 
 })(window)

@@ -43,7 +43,6 @@ export default {
 	created(){
 		// 刷新页面 topnav 隐藏
 		this.$store.state.topnavShow = false;
-
 		// location地址ID 
 		let lid = 290;
 		// 电影ID
@@ -56,30 +55,24 @@ export default {
 
 		let url = "/m/Service/callback.mi/movie/Detail.api?movieId="+movieId+"&locationId="+lid+"&t="+time;
 		// 后台获取数据
-		this.$http.get(url).then( data=>{	
+		this.$http.get(url).then( data =>{	
 			this.movieTitle = data.data.titleCn;
 		})
 
 		/*
 http://m.mtime.cn/Service/callback.mi/Movie/Video.api?movieId=229733&pageIndex=1&t=201782515273436695
-
 		*/
 
 		let url2 = '/m/Service/callback.mi/Movie/Video.api?movieId='+movieId+'&pageIndex=1&t='+time;
 		this.$http.get(url2).then( data=>{
 			
 			this.videoList = data.data.videoList;
-
-
+			
 			// load  消失
 			this.isLoad = false ;
 		})
 
-
-
 	},
-
-
 
 	components:{
 		load,
@@ -92,7 +85,6 @@ http://m.mtime.cn/Service/callback.mi/Movie/Video.api?movieId=229733&pageIndex=1
 			videoList:[],
 			videoTitle:'',
 			videoSrc:''
-
 		}
 	},
 	methods:{
@@ -101,9 +93,9 @@ http://m.mtime.cn/Service/callback.mi/Movie/Video.api?movieId=229733&pageIndex=1
 			window.location.href = "/index/movie/"+this.$route.params.id
 		},
 		openVideo(item){
-			this.$store.state.videoShow = true
-			this.videoTitle = item.title
-			this.videoSrc = item.hightUrl
+			this.$store.state.videoShow = true;
+			this.videoTitle = item.title;
+			this.videoSrc = item.hightUrl;
 		}
 	}
 }

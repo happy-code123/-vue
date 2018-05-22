@@ -180,7 +180,6 @@ export default{
 
 		})
 
-		
 
 	},
 	mounted(){
@@ -219,7 +218,9 @@ export default{
 		// 退回上一页
 		back(){
 			// window.history.back();
-			window.location.href = "/index"
+			// window.history.go(-1);
+			window.location.href = "/index";
+			
 		},
 		toggleEve(){
 			this.isContentHide = !this.isContentHide
